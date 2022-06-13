@@ -36,6 +36,7 @@ function render() {
         display.appendChild(img);
         saveImage(response);
     });
+   
 }
 
 function render1(x) {
@@ -69,7 +70,10 @@ function getImage() {
     src = "https://source.unsplash.com/random/1024x500/?" + userInput + "=1"
 
     render();
-
+    document.getElementById('loader').style.opacity =1
+    document.getElementById('back').style.opacity =1
+    document.getElementById('forward').style.opacity =1
+    document.getElementById('download').style.opacity =1
     document.getElementById('input').value = ''
 }
 
@@ -99,3 +103,4 @@ function back() {
     render1(j);
    jaAnds();
 }
+
