@@ -1,0 +1,14 @@
+#search{
+    display: flex;
+    justify-content: center;
+
+}
+#input{
+    width: 500px;
+}
+
+#display{
+    width: 1024px;
+    height: 500px;
+    margin: auto;
+}

@@ -12,7 +12,7 @@ function getImage() {
     input.push(userInput);
     const display = document.getElementById('display');
     display.innerText = "";
-    src = "https://source.unsplash.com/random/500x500/?" + userInput + "=1"
+    src = "https://source.unsplash.com/random/1024x500/?" + userInput + "=1"
     
     fetch(src).then((response) => {
         const img = document.createElement('img');
@@ -36,7 +36,7 @@ function forward() {
     const display = document.getElementById('display');
     display.innerText = "";
     // const img = document.createElement('img');
-    src = "https://source.unsplash.com/random/500x500/?" + userInput + "=" + i;
+    src = "https://source.unsplash.com/random/1024x500/?" + userInput + "=" + i;
     i = i + 1;
     
    
@@ -80,14 +80,30 @@ function back() {
     // fetch(src).then((response) => {currImage = response});
 }
 
-function download() {
-    const a = document.createElement('a')
-    a.href=images[s].url
-    a.download = "jii"
-    document.body.appendChild(a)
-    a.setAttribute('target','none');
-    a.click()
-    document.body.removeChild(a)
-  }
+// function download() {
+//     const a = document.createElement('a')
+//     a.href=images[s].url;
+//     // a.href="i.jpg"
+//     a.download = "jii"
+//     document.body.appendChild(a)
+//     a.setAttribute('target','none');
+//     a.click()
+//     document.body.removeChild(a)
+//   }
   
-  
+function download(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", images[s].url, true);
+    xhr.responseType = "blob";
+    xhr.onload = function(){
+        var urlCreator = window.URL || window.webkitURL;
+        var imageUrl = urlCreator.createObjectURL(this.response);
+        var tag = document.createElement('a');
+        tag.href = imageUrl;
+        tag.download = "hii";
+        document.body.appendChild(tag);
+        tag.click();
+        document.body.removeChild(tag);
+    }
+    xhr.send();
+}
