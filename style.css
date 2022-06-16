@@ -89,9 +89,8 @@ body{
 }
 #display{
     width: 100%;
-    /* background-image: url('images/load.gif'); */
-    background-repeat: no-repeat;
-    background-position: center;
+    
+    
 
     /* height: 500px; */
     
@@ -101,7 +100,15 @@ img{
     height: 100%;
     animation: fadein 1s;
 }
-
+p{
+    text-align: center;
+    opacity: 0;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.523);
+    animation: fadein 1s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
 .display{
     position: relative;;
 }
@@ -112,7 +119,7 @@ img{
     background-image: url('images/load.gif');
     background-repeat: no-repeat;
     background-position: center;
-    background-size:10% 20%;
+    background-size:50px 50px;
     height: 100%;
     width: 100%;
     top: 0;
