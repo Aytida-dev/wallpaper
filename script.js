@@ -56,7 +56,7 @@ function download() {
         var imageUrl = urlCreator.createObjectURL(this.response);
         var tag = document.createElement('a');
         tag.href = imageUrl;
-        tag.download = "hii";
+        tag.download = input[input.length - 1];
         document.body.appendChild(tag);
         tag.click();
         document.body.removeChild(tag);
@@ -65,9 +65,11 @@ function download() {
 }
 
 function getImage() {
+     let width = ""+window.innerWidth;
+     let height = ""+window.innerHeight;
     const userInput = document.getElementById('input').value;
-    push(userInput);
-    src = "https://source.unsplash.com/random/1024x500/?" + userInput + "=1"
+    input.push(userInput);
+    src = "https://source.unsplash.com/random/"+width+"x"+height+"/?" + userInput + "=1"
 
     render();
     document.getElementById('loader').style.opacity =1
@@ -78,9 +80,11 @@ function getImage() {
 }
 
 function forward() {
+    let width = ""+window.innerWidth;
+     let height = ""+window.innerHeight;
     const userInput = input[input.length - 1];
 
-    src = "https://source.unsplash.com/random/1024x500/?" + userInput + "=" + i;
+    src = "https://source.unsplash.com/random/"+width+"x"+height+"/?" + userInput + "=" + i;
     
     iAnds();
 
