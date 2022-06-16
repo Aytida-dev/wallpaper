@@ -17,21 +17,21 @@ body{
 
 #input{
     width: 700px;
-    /* min-width: 200px; */
+    min-width: 0px;
     height: 40px;
     border: 2px solid rgba(241,176,107);
     /* border-right: none; */
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.623);
+    color: rgba(255, 255, 255, 0.708);
     font-size: 20px;
     text-indent: 20px;
     font-family: cursive;
     
 }
 #input::placeholder{
-    color: rgba(255, 255, 255, 0.463);
+    color: rgba(255, 255, 255, 0.582);
     font-size: 17px;
     text-indent: 20px;
     font-family: cursive;
