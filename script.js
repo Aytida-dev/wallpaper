@@ -46,6 +46,8 @@ function render1(x) {
     img.setAttribute('src', (images[images.length - x]).url);
     display.appendChild(img);
 }
+
+// document.getElementById('download').style.width=window.innerWidth
 //control
 function download() {
     var xhr = new XMLHttpRequest();

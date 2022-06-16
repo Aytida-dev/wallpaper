@@ -17,7 +17,7 @@ body{
 
 #input{
     width: 700px;
-    min-width: 200px;
+    /* min-width: 200px; */
     height: 40px;
     border: 2px solid rgba(241,176,107);
     /* border-right: none; */
@@ -144,10 +144,11 @@ img{
 }
 #download{
     position: absolute;
-    right: 0px;
+    /* right: 0px; */
     bottom: -35px;
-    left: 0px;
+    /* left: 0px; */
     border: none;
+    width: 100%;
     background-color: transparent;
     height: 40px;
     background-image: url('images/icons8-download-48.png');
