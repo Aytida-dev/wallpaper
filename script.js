@@ -110,3 +110,27 @@ function back() {
    jaAnds();
 }
 
+
+document.body.addEventListener("keypress",()=>{
+     // 75 is keycode of 'k'
+    if(event.keyCode===13)
+    {
+        document.getElementById('getImage').click();
+    }
+   
+    // console.log(event);
+});
+document.body.addEventListener("keydown",()=>{
+    if(event.keyCode===39){
+        document.getElementById('forward').click();
+    }
+    // console.log(event);
+    
+    if(event.keyCode===37){
+        document.getElementById('back').click();
+    }
+    // console.log(event);
+    if(event.keyCode===40){
+        document.getElementById('download').click();
+    }
+});

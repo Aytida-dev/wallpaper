@@ -20,7 +20,7 @@ body{
     min-width: 0px;
     height: 40px;
     border: 2px solid rgba(241,176,107);
-    /* border-right: none; */
+    animation: fadein 1s ease-in;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     background-color: transparent;
@@ -42,6 +42,7 @@ body{
     border-color:rgba(241,176,107) ;
 }
 
+
 .getImage{
     /* border: 2px solid rgba(255, 255, 255, 0.523); */
     border: none;
@@ -54,6 +55,7 @@ body{
     background-position: center;
     background-size: 50% 70%;
     z-index: 10;
+    animation: fadein 1s ease-in;
 
 }
 
@@ -61,6 +63,10 @@ body{
 .getImage:hover{
     cursor: pointer;
     animation: 1s rel;
+}
+@keyframes fadein {
+    0%{opacity: 0;}
+    100%{ opacity: 1;}
 }
 
 @keyframes rel{
@@ -93,8 +99,9 @@ body{
 img{
     width: 100%;
     height: 100%;
-    
+    animation: fadein 1s;
 }
+
 .display{
     position: relative;;
 }
