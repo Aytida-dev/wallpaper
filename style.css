@@ -51,6 +51,7 @@ body{
     background-color:  rgb(241, 176, 107,0.5);
     background-image: url('images/icons8-search-48.png');
     width: 60px;
+    min-width: 50px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50% 70%;
