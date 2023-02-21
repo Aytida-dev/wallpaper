@@ -76,7 +76,7 @@ function getImage() {
 
     render();
     //animate these
-    
+
     document.getElementById('loader').style.opacity =1
     document.getElementById('back').style.opacity =1
     document.getElementById('forward').style.opacity =1
@@ -139,3 +139,25 @@ document.body.addEventListener("keydown",()=>{
         document.getElementById('download').click();
     }
 });
+
+
+let touchstartX = 0
+let touchendX = 0
+    
+function checkDirection() {
+  if (touchendX < touchstartX) {
+    forward()
+  }
+  if (touchendX > touchstartX) {
+    back()
+  }
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkDirection()
+})
