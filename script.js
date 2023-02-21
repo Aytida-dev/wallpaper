@@ -35,6 +35,7 @@ function render() {
         img.setAttribute('src', response.url);
         display.appendChild(img);
         saveImage(response);
+        
     });
    
 }
@@ -74,10 +75,14 @@ function getImage() {
     src = "https://source.unsplash.com/random/"+width+"x"+height+"/?" + userInput + "=1"
 
     render();
+    //animate these
+    
     document.getElementById('loader').style.opacity =1
     document.getElementById('back').style.opacity =1
     document.getElementById('forward').style.opacity =1
     document.getElementById('download').style.opacity =1
+
+
     document.getElementById('input').value = ''
 }
 
