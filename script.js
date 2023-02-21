@@ -84,6 +84,8 @@ function getImage() {
 
 
     document.getElementById('input').value = ''
+
+    
 }
 
 function forward() {
@@ -110,7 +112,9 @@ function forward() {
     
 }
 
+
 function back() {
+   
     render1(j);
    jaAnds();
 }
